@@ -25,3 +25,26 @@ let obj = {
 The getter works when obj.propNAme is read, the setter - when it is assigned.
 In class add get and set. In set add a check value 
 Add method which return keys and values
+
+## Task01
+Q: Create a "Tower" class that inherits from the Building class
+
+A: To create a class inheritance, use the "extends" keyword.
+``` javascript
+class Building {
+    constructor(floors, material, address) {
+        this.floors = floors;
+        this.material = material;
+        this.address = address;
+    }
+class Tower extends Building{
+    constructor(floors, material, address, hasElevator, arcCapacity, height){
+        super(floors, material, address)
+        this.hasElevator = hasElevator;
+        this.arcCapacity = arcCapacity;
+        this.height = height;
+    }
+}
+```
+For use parents constructor and get's access to the parent's properties - super().
+For  use a few properties - super(a, b, c)
