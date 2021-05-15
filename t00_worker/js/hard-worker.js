@@ -1,6 +1,7 @@
 class HardWorker {
     name;
-    get age(){
+
+    get age() {
         return  this._age
     }
     set age(value){
@@ -21,18 +22,4 @@ class HardWorker {
     toObject(){
         return {name: this.name, age: this._age, salary: this._salary}
     }
-
 }
-
-worker = new HardWorker;
-
-worker.name = 'Bruce';
-console.log(worker.name);
-
-worker.age = 50;
-worker.salary = 1500;
-console.log(worker.toObject())
-
-worker.name = 'Linda';
-worker.age = 140;
-console.log(worker.toObject())

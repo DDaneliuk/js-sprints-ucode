@@ -48,3 +48,50 @@ class Tower extends Building{
 ```
 For use parents constructor and get's access to the parent's properties - super().
 For  use a few properties - super(a, b, c)
+
+## Task02
+### Prototypal inheritance
+In JavaScript, object have a special hidden property [[Property]], thaht is either null or references another object. That object is called "a prototype"
+
+The property  [Propertype] is internal and hidden, but there are many ways to set it.
+One of them is to use the special name __proto__, like this:
+```javascript
+let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // sets rabbit.[[Prototype]] = animal
+```
+There are only two limitations:
+1. The references can't go in circles. JavaScript will throw an error if we try to assign __proto__ in a circle.
+2. The value of __proto__ can be either an object or null. Other types are ignored.
+### Writing doesn’t use prototype
+The prototype is only used for reading properties.
+Write/delete operations work directly with the object.
+
+### F.prototype
+```javascript
+let animal = {
+  eats: true
+};
+
+function Rabbit(name) {
+  this.name = name;
+}
+
+Rabbit.prototype = animal;
+
+let rabbit = new Rabbit("White Rabbit"); //  rabbit.__proto__ == animal
+
+alert( rabbit.eats ); // true
+```
+Setting Rabbit.prototype = animal literally states the following: "When a new Rabbit is created, assign its [Prototype] to animal".
+
+### Default F.prototype, constructor property
+Every function has the "prototype" property even if we don't supply it.
+The default "prototype" is an object with the only properly constructor that points back to the function itself.
+
+## Task 03
