@@ -95,3 +95,177 @@ Every function has the "prototype" property even if we don't supply it.
 The default "prototype" is an object with the only properly constructor that points back to the function itself.
 
 ## Task 03
+### Map
+Map is  collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+Methods and properties are:
+1. new Map() - create the map 
+2. map.set(key, value) - stores the value by the key
+3. map.get(key) - returns the value by the key, undefined if key doesn't exist in map.
+4. map.has(key) - returns true if the key exist, false otherwise.
+5. map.delete(key) - removes the value by the key.
+6. map.clear() - removes everything from the map.
+7. map.size - returns the current element count.
+```javascript
+let map = new Map();
+
+map.set('1', 'str1');   // a string key
+map.set(1, 'num1');     // a numeric key
+map.set(true, 'bool1'); // a boolean key
+
+// remember the regular Object? it would convert keys to string
+// Map keeps the type, so these two are different:
+alert( map.get(1)   ); // 'num1'
+alert( map.get('1') ); // 'str1'
+
+alert( map.size ); // 3
+```
+#### Iteration over Map 
+1. map.keys() - returns an iterable for keys.
+2. map.value() - returns an iterable for values.
+3. map.entries() - returns an iterable for entries [key, value], it's used by defauilt in for...of.
+```javascript
+let recipeMap = new Map([
+  ['cucumber', 500],
+  ['tomatoes', 350],
+  ['onion',    50]
+]);
+
+// iterate over keys (vegetables)
+for (let vegetable of recipeMap.keys()) {
+  alert(vegetable); // cucumber, tomatoes, onion
+}
+
+// iterate over values (amounts)
+for (let amount of recipeMap.values()) {
+  alert(amount); // 500, 350, 50
+}
+
+// iterate over [key, value] entries
+for (let entry of recipeMap) { // the same as of recipeMap.entries()
+  alert(entry); // cucumber,500 (and so on)
+}
+```
+#### Object.entries: Map from Object
+If we have a plain object, and we'd like to create a Map from it, then we can use built-in method Object.entries(obj) 
+that returns an array of key/value pairs for an object exactly in that format.
+```javascript
+let obj = {
+  name: "John",
+  age: 30
+};
+
+let map = new Map(Object.entries(obj));
+
+alert( map.get('name') ); // John
+```
+#### Object.fromEntries: Object from Map
+There's Object.fromEntries method that does the reverce: given an array of [key, value] pairs, it creates an object from them:
+```javascript
+let map = new Map();
+map.set('banana', 1);
+map.set('orange', 2);
+map.set('meat', 4);
+
+let obj = Object.fromEntries(map.entries()); // make a plain object (*)
+
+// done!
+// obj = { banana: 1, orange: 2, meat: 4 }
+
+alert(obj.orange); // 2
+```
+### Set
+Is a special type collection - "set of values" (without keys), where each value may occur only once.
+1. new Set(iterable) - creates the Set, and if an iterable object is provided (usually an array), copies values from it into the set 
+2. set.add(value) - adds a value, returns the set itself.
+3. set.delete(value) - removes the value, returns true if value existed at the moment of the call, otherwise false.
+4. set has(value) - returns true if the value exists in the set, otherwise false.
+5. set.clear() - removes everything from the set.
+6. set.size - is the elements count.
+
+The main feauture is that repeated calls of st.add(value) with the same value don't do anything. That's the reason why each value appears in a Set only once. 
+
+For example, we have visitors coming, and we'd like to remember everyone. But repeated visits should not lead to duplicates. A visitor must be "counted" only once.
+``` javascript
+let set = new Set();
+
+let john = { name: "John" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+
+// visits, some users come multiple times
+set.add(john);
+set.add(pete);
+set.add(mary);
+set.add(john);
+set.add(mary);
+
+// set keeps only unique values
+alert( set.size ); // 3
+
+for (let user of set) {
+  alert(user.name); // John (then Pete and Mary)
+}
+```
+The alternative to Set could be an array of users, and the code to check for duplicates on every insertion using arr.find. But the perfomance would be mush worse
+#### Iteration over Set
+We can loop over a set either with for..of or using forEach
+```javascript
+let set = new Set(["oranges", "apples", "bananas"]);
+
+for (let value of set) alert(value);
+
+// the same with forEach:
+set.forEach((value, valueAgain, set) => {
+  alert(value);
+});
+```
+## Task 04
+### WeakMap
+The first difference between Map and WeakMap is that keys must be object, not primitive values:
+```javascript
+let weakMap = new WeakMap();
+
+let obj = {};
+
+weakMap.set(obj, "ok"); // works fine (object key)
+
+// can't use a string as the key
+weakMap.set("test", "Whoops"); // Error, because "test" is not an object
+```
+Now if we use an object as the key i it, and there are no other references to that object - it will be removed from memory (and from the map automatically).
+WeakMap does not support iteration and method keys(), values(), entries(), so there's no way to get all keys or values from it.
+1. weakMap.get(key)
+2. weakMap.set(key, value)
+3. weakMap.delete(key)
+3. weakMap.has(key)
+### Use case: additioanl data
+The main area of aplication for WeakMap is an additional data storage that you can clean.
+Another common example is caching. We can store ("cache") results from a function, so that future calls on the same object can reuse it.
+### WeakSet
+1. It is analogous to Set, but we may only add object to WeakSet
+2. An object exists in the set while it is reachable from somewhere else.
+3. Like Set, it supports add, has and delete, but not size, keys() and no iterations.
+
+## Task05
+### Modules
+A module is just a file. One script is one module.
+Modules can load each other and use special directives "export" and "import" to interchange functionality, call functions of one module from another one:
+1. export keyword labels variables and functions that should be accessible from outside the current module.
+2. import allow the import of functionality from other modules.
+```javascript
+// sayHi.js
+export function sayHi(user){
+  alert(`Hello, ${user}`);
+}
+
+// main.js
+import {sayHi} from './sayHi.js';
+
+alert(sayHi);
+sayHi('John');
+```
+#### Always “use strict”
+Modules always work in strict mode.
+
+## Task06
+### Proxy
