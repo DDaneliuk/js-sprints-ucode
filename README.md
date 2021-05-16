@@ -269,3 +269,10 @@ Modules always work in strict mode.
 
 ## Task06
 ### Proxy
+A Proxy object wraps another object and intercepts operations, like reading/ writing properties and other,
+optinally handling them on its own, or transparently allowing the object to handle them.
+```javascript
+let proxy = new Proxy(target, handler);
+```
+1. target - is an object to wrap, can be anything, including functions.
+2. handler - proxy configuration: an object with "traps", methods that intercept operations. - e.g. get trap for reading a property of target, set trap for writing a property into target, and so on.
