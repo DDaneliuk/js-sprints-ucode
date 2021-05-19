@@ -355,3 +355,38 @@ As there are no traps, all operations on proxy are forwarded to target.
 1. A writing operation proxy.test = sets the value on target
 2. A reading operation proxy.test returns the value from target.
 3. Iteration over proxy returns values from target.
+
+## Task08
+
+### Mixins
+
+In JavaScript we can only inherit from a single object. There can be one [Prototype] for an object. And a class may extend only one other class.
+Mixin is a class containing methods that can be used by other classes without a need to inherit from it
+
+#### Mixin example
+
+```javascript
+// mixin
+let sayHiMixin = {
+  sayHi() {
+    alert(`Hello ${this.name}`);
+  },
+  sayBye() {
+    alert(`Bye ${this.name}`);
+  }
+};
+
+// usage:
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// copy the methods
+Object.assign(User.prototype, sayHiMixin);
+
+// now User can say hi
+new User("Dude").sayHi(); // Hello Dude!
+}
+```
