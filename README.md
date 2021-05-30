@@ -390,3 +390,5 @@ Object.assign(User.prototype, sayHiMixin);
 new User("Dude").sayHi(); // Hello Dude!
 }
 ```
+
+## Promise

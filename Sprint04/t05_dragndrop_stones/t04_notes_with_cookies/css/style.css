@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+.block {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 7px;
+}
+.red {
+  left: 450px;
+  top: 150px;
+  background: red;
+}
+.blue {
+  left: 450px;
+  top: 500px;
+  background: blue;
+}
+.yellow {
+  left: 320px;
+  top: 330px;
+  background: yellow;
+}
+.green {
+  left: 630px;
+  top: 150px;
+  background: green;
+}
+.pink {
+  left: 630px;
+  top: 500px;
+  background: pink;
+}
+.brown {
+  left: 750px;
+  top: 330px;
+  background: brown;
+}
+.active {
+  border: 5px solid #000;
+}
