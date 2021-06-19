@@ -1,0 +1,20 @@
+{
+  "name": "t01_hack_it",
+  "version": "1.0.0",
+  "description": "task01",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "t01"
+  ],
+  "author": "Denis Daneliuk",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "expr": "0.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2"
+  }
+}
