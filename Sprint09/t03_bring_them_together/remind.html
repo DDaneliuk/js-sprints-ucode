@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign up</title>
+        <link rel="stylesheet" href="public/style.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <section class="auth-sidebar">
+                <div class="auth-sidebar-content">
+                        <div class="login-propos on-color">
+                        <h2>Don't have profile? Create just now</h2>
+                        <a href="/"><button class="button log-in-nav">Sign up</button></a>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <main>
+                    <div class="auth-content">
+                        <h2>Don't worry, we help you remind a password</h2>
+                        <p class="message-error" id="message-error"></p>
+                        <div class="signup-form">
+                            <form action="/send" class="signup" id="new_user" method="POST">
+                                <label>Fill your email</label>
+                                <input class="text-input" type="text" placeholder="Your email" name="email" required>               
+                                <div class="form-btns">
+                                    <input class="button form-sub" type="submit" value="Remind">
+                                </div>     
+                          </form>
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </body>
+</html>
