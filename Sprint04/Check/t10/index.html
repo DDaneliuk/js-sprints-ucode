@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>Super-stats</title>
+        <meta name="description" content="t10. Super-stats">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+    <body>
+        <h1>Super-stats</h1>
+        <div class="in">
+            <input id="heroname" placeholder="search for a superhero">
+            <button onclick="search()">search</button>
+            <button onclick="random()">random</button>
+            <button onclick="compare()">compare (<span id="compare-count">0</span>)</button>
+        </div>
+        <div class="search-result"></div>
+        <div class="charts"></div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

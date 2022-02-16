@@ -1,0 +1,12 @@
+img {
+    height: 250px;
+  }
+  table tr td img {
+    height: 100px;
+  }
+  div img:hover ~ table tr:nth-child(odd) td:nth-child(odd) {
+    visibility: hidden;
+  }
+  div img:hover ~ table tr:nth-child(even) td:nth-child(even) {
+    visibility: hidden;
+  }

@@ -1,0 +1,21 @@
+button {
+	padding:0 10px;
+	height:2em;
+	color:green;
+	}
+button:hover {
+	color:red;
+}
+input  {
+	padding:0 10px;
+	height:2em;
+	width: 400px;
+}
+input:focus{
+	color:green;
+}
+input:hover{
+	color:red;
+}
+
+

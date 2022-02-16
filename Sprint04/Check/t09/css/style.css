@@ -1,0 +1,38 @@
+.allDays{
+    /* display: flex; */
+    margin: auto;
+    text-align: center;
+}
+.city{
+    width: 100%;
+    text-align: center;
+    background-color: lightskyblue;
+    color: white;
+    font-size: 25px;
+    border-radius: 23px 23px 0 0;
+}
+.day{
+    text-align: center;
+    /* flex: auto; */
+    display: inline-block;
+}
+.forecast{
+    max-width: max-content;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 25px;
+}
+.day:hover{
+    box-shadow: 0 0 5px 5px gray;
+    border-radius: 23px;
+}
+.date{
+    border-bottom: 2px solid lightblue;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+.temper{
+    border-top: 2px solid lightblue;
+    padding-top: 15px;
+    margin-top: 0;
+}

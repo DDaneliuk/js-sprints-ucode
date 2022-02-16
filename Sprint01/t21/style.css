@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+}
+div.gallery{
+    border:2px solid black;
+    display: grid;
+    align-content:stretch;
+    border-radius:10px;
+    padding: 10px;
+    width:100%;
+    height:auto;
+}
+img{
+    width:100%;
+}
+@media screen and (max-width:640px){
+   div.gallery{
+      grid-template-columns:25% 25% 25% 25%;
+      grid-template-rows: 200px 200px 200px 200px 200px 400px 400px;
+      align-content: stretch;
+   }
+   .item-1{
+      grid-column-start: span 3; 
+      grid-row-end: 2;
+      align-self:stretch;
+      width:95%;
+   }
+   .item-2{
+       grid-column-start:1;
+       grid-column-end:span 3;
+       grid-row-start: 2;
+       height:100%;
+       width:120%;
+    }
+    .item-3{ 
+      grid-column-start: span 3;
+       grid-row-start: 3;
+       height:100%;
+       width:90%;
+       
+    }
+    .item-4{ 
+       grid-row-start: 4;
+       grid-column-start: span 3;
+       height:100%;
+       width: 100%;
+    }
+    .item-5{ 
+       grid-row-start: 5;
+       grid-column-start: span 2;
+       height:100%;
+       width: 125%;
+    }
+    .item-6{ 
+       grid-column-start:4;
+       grid-column-end:span 2;
+       grid-row-start: 4;
+       grid-row-end:span 2;
+       justify-self: end;
+       height:100%;
+       width: 100%;
+
+    }
+    .item-7{ 
+       grid-row-start: 6;
+       grid-column-start: span 2;
+       height:100%;
+       
+    }
+    .item-8{ 
+       grid-row-start: 6;
+       grid-column-start: span 2;
+       height:100%;
+       width:75%;
+    }
+    .item-9{ 
+       grid-row-start: 7;
+       grid-column-start:1;
+       height:100%;
+       width:200%;
+    }
+}
+@media screen and (min-width:640px){
+   div.gallery{
+      grid-template-columns:25% 25% 25% 25%;
+      grid-template-rows: 300px 300px 300px 300px 500px 500px;
+      align-content: stretch;
+   }
+   .item-1{
+      grid-column-start: span 3; 
+      grid-row-end: 2;
+      align-self:stretch;
+      width:95%;
+   }
+   .item-2{
+       grid-column-start:1;
+       grid-column-end:span 3;
+       grid-row-start: 2;
+       height:100%;
+       width:120%;
+    }
+    .item-3{ 
+      grid-column-start: span 3;
+       grid-row-start: 3;
+       height:100%;
+       width:90%;
+       
+    }
+    .item-4{ 
+       grid-row-start: 4;
+       grid-column-start: span 2;
+       height:100%;
+       width: 100%;
+    }
+    .item-5{ 
+       grid-row-start: 4;
+       grid-column-start: span 2;
+       height:100%;
+    }
+    .item-6{ 
+       grid-row-start: 5;
+       height:100%;
+       width: 100%;
+    }
+    .item-7{ 
+       grid-row-start: 5;
+       grid-column-start: span 2;
+       height:100%;
+       justify-content: start;
+    }
+    .item-8{ 
+       grid-row-start: 6;
+       height:100%;
+       width:75%;
+    }
+    .item-9{ 
+       grid-row-start: 6;
+       height:100%;
+       width:200%;
+       margin-left:-65px;
+    }
+}
+@media screen and (min-width:1366px){
+    div.gallery{
+       grid-template-columns:25% 25% 25% 25%;
+       grid-template-rows:300px  300px 600px;
+       align-content:stretch;
+       gap:0px 20px;
+    }
+    .item-1{
+       grid-column-start: span 2; 
+       grid-row-end: 2;
+       height: 100%;
+       width:90%
+    }
+    .item-2{
+        grid-row-start: 1;
+        grid-column-start:3;
+        grid-column-end:span 2;
+        margin-left:-85px;
+        height:100%;
+        width:104%;
+     }
+     .item-3{ 
+        grid-column-start: 1;
+        grid-row-start: 2;
+        height:100%;
+        width:163%;
+     }
+     .item-4{ 
+         grid-column-start: 2;
+         grid-column-end: span 2;
+         grid-row-start: 2;
+         margin-left:210px;
+         height:100%;
+         width:60%;
+     }
+     .item-5{ 
+         grid-column-start: 4;
+         grid-row-start: 2;
+         margin-left:-78px;
+         height:100%;
+         width:106%;
+     }
+     .item-6{ 
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        height:100%;
+     }
+     .item-7{ 
+        grid-column-start:2;
+        grid-row-start: 3;
+        height:100%;
+        justify-content: start;
+     }
+     .item-8{ 
+        grid-column-start: 3;
+        grid-column-end:4;
+        grid-row-start: 3;
+        height:100%;
+     }
+     .item-9{ 
+      grid-column-start: 4;
+        grid-row-start: 3;
+        height:100%;
+        width:100%;
+     }
+}

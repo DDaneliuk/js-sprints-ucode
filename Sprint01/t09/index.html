@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Task09</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Superhero Form</h1>
+<form>
+	<fieldset>
+		<legend>About the Superhero</legend>
+		<label>Real Name</label>
+		<input type="text" placeholder="Superhero real name" required autofocus>
+		<label>Superhero Name</label>
+		<input type="text" placeholder="Superhero alias">
+		<label>Age</label>
+		<input type="number" min="1" max="999" step="1">
+		<br>
+		<br>
+		<label>About</label>
+		<textarea rows="5" cols="70" maxlength="500" placeholder="Information about the superhero, max 500 symbols"></textarea>
+		<br>
+		<br>
+		<label>Photo:</label>
+		<input type="file">
+	</fieldset>
+	<fieldset>
+		<legend>Powers</legend>
+		<input type="checkbox" id="telekinesis">
+		  <label for="telekinesis">Telekinesis</label>
+		  
+  		<input type="checkbox" id="strength">
+		  <label for="strength">Super strength or speed</label>
+		  
+  		<input type="checkbox" id="shapeshifting">
+		  <label for="shapeshifting">Shapeshifting</label>
+		
+		<input type="checkbox" id="flight">
+		  <label for="flight">Flight</label>
+
+		<input type="checkbox" id="control">
+		  <label for="control">Elemental control</label>
+		
+		<input type="checkbox" id="other">
+		  <label for="other">Other</label>
+		<br>
+		<br>
+		<label>Level of control:</label>
+		<input type="range" min="1" max="10" step="1">
+	</fieldset>
+	<fieldset>
+		<legend>Origin of Powers</legend>
+		<input type="radio" id="unknown">
+		  <label for="unknown">Unknown</label>
+		  
+  		<input type="radio" id="accident">
+		  <label for="accident">Freak lab accident</label>
+		
+		<input type="radio" id="ancient">
+		  <label for="ancient">Chosen by an ancient wise being</label>
+
+		<input type="radio" id="whois">
+		  <label for="whois">The superhero is not human</label>
+		
+		<input type="radio" id="other">
+		  <label for="other">Other</label>
+	</fieldset>
+	<br>
+	<input type="reset">
+	<input type="submit">
+</form>
+</body>
+</html>

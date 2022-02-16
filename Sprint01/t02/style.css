@@ -1,0 +1,53 @@
+table {
+	border-collapse: collapse;
+	text-align: center;
+}
+thead {
+	background-color: black;
+	color:white;
+}
+img {
+    height: 120px; 
+    width:120px;
+    border-radius: 10px;
+}
+td{
+    border:2px solid #c7c7c7;
+}
+table tr#row2 {
+	background-color: orange;
+	height:140px;
+}
+table tr#row3 {
+	background-color: green;
+	height:140px;
+}
+table tr#row4 {
+	background-color: blue;
+	height:140px;
+}
+table tr#row5 {
+	background-color: yellow;
+	height:140px;
+}
+table tr#row6 {
+	background-color: red;
+	height:140px;
+}
+table tr#row7 td {
+	background-color: purple;
+	height:140px;
+}
+tr td:last-child{
+	width: 140px;
+}
+tr td:first-child{
+	width: 60px;
+}
+tr td:nth-child(2){
+	width: 60px;
+}
+
+tfoot tr td{
+	height:40px;
+}

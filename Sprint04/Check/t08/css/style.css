@@ -1,0 +1,18 @@
+.countP{
+    position: fixed;
+    right: 100px;
+    top: 15px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+}
+.lazy{
+    max-width: 600px;
+    margin: auto;
+}
+img{
+    padding: 5px 0;
+}
+body{
+    text-align: center;
+}

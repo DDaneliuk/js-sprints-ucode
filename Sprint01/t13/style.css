@@ -1,0 +1,12 @@
+img {
+    height:400px;
+    float:left;   
+}
+*{
+    margin:20px;
+}
+@media print {
+    p {
+        clear:both;
+    }
+}

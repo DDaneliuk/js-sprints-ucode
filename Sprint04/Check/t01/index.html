@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>Movies</title>
+        <meta name="description"content="t01. Movies">
+        <link rel="stylesheet"href="css/style.css">
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+        <!-- <script src="js/movies.js" type="module" defer></script> -->
+        
+    </head>
+    <body>
+        <div class="sort">
+            <button id="all" class="sort_active" onclick="renderAll(movies, favorites)">All</button>
+            <button id="fav" onclick="renderFav(favorites)">Favorite</button>
+        </div>
+        <div class="movies_all">
+            <div id="list">
+                <ul class="list">
+                </ul>
+            </div>
+            <div class="movie_info"></div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+.jarvis{
+    background-color: red;
+    width: max-content;
+    max-width: 175px;
+    margin: auto 4px 4px 4px;
+    padding: 3px;
+}
+.user{
+    background-color: lightgray;
+    margin: auto 4px 4px auto;
+    /* text-align: right; */
+    width: max-content;
+    max-width: 165px;
+    padding: 3px;
+}
+#jarvis{
+    max-height: 325px;
+    overflow-y: auto;
+}
+#main{
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    /* padding: 15px; */
+    width: 200px;
+    height: 400px;
+    position: relative;
+}
+h1{
+    background-color: darkred;
+    margin: 0;
+    padding: 5px;
+    border-radius: 18px 18px 0 0;
+}
+#message{
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 0 18px;
+    border: none;
+    background-color: lightgray;
+    padding: 5px;
+}
+button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 25px;
+    border: none;
+    border-radius: 0 0 18px 0;
+    background-color: gray;
+    color: white;
+}
+#message:focus,
+button:focus{
+    outline: none;
+}

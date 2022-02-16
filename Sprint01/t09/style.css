@@ -1,0 +1,9 @@
+form {
+    width:auto;
+    border:2px solid grey;
+    height:auto;
+    padding:20px;
+}
+input [type=checkbox]{
+    display: inline-block;
+}

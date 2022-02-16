@@ -1,0 +1,96 @@
+table{
+    border:4px solid black;
+    width: 100%;
+    background-image: linear-gradient(90deg, #6e0000 ,antiquewhite);
+    text-align: center;
+    border-collapse: collapse;
+}
+table tfoot tr td{
+    padding: 10px;
+}
+a {
+    color:white;
+    font-weight: bold;    
+}
+a::before{
+    content: "<";
+}
+table th {
+    color:#ffe369;
+    font-weight:bold;
+    padding:10px;
+    border: 2px solid rgba(189, 195, 199, 0.05);
+    background-color: rgba(110, 0, 0, 0.4)   
+}
+table tr td:first-child{
+    color:white;
+    font-weight: bold;
+}
+tbody tr td:nth-child(6){
+    border:2px solid rgba(189, 195, 199, 0.05);
+    background-color: antiquewhite;
+    color:midnightblue;
+    padding: 5px 50px;
+}
+tbody tr td:nth-child(5){
+    border:2px solid rgba(189, 195, 199, 0.05);
+    background-color: antiquewhite;
+    color:midnightblue;
+    padding: 5px 50px;
+}
+tbody tr td:nth-child(4){
+    border:2px solid rgba(189, 195, 199, 0.05);
+    background-color: antiquewhite;
+    color:midnightblue;
+    padding: 5px 50px;
+}
+tbody tr td:nth-child(3){
+    border:2px solid rgba(189, 195, 199, 0.05);
+    background-color: antiquewhite;
+    color:midnightblue;
+    padding: 5px 50px;
+}
+tbody tr td:nth-child(2){
+    border:2px solid rgba(189, 195, 199, 0.05);
+    background-color: antiquewhite;
+    color:midnightblue;
+    padding: 5px 50px;
+}
+tr:nth-child(even){
+    background-color: rgba(143,148,251, 0.1);
+}
+tr:nth-child(old){
+    background-color: rgba(143,148,251, 0.1);
+}
+tbody tr.all1 td:nth-child(4){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.all3 td:nth-child(3){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.all4_5 td:nth-child(4){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.all4_5 td:nth-child(5){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.all5_6 td:nth-child(5){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.all5_6 td:nth-child(6){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.all6 td:nth-child(6){
+    background-color: darkred;
+    color:white;
+}
+tbody tr.false td:nth-child(2){
+    background-color: darkred;
+    color:white;
+}

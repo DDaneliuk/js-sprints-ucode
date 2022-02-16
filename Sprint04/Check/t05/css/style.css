@@ -1,0 +1,36 @@
+li{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-style: italic;
+    border-top: 1px dotted black;
+    font-size: small;
+}
+#menu{
+    width: 50%;
+    margin: auto;
+    background-color: rgb(222, 184, 135);
+    box-shadow: 0 0 5px 5px rgb(189, 125, 42);
+}
+h1{
+    text-align: center;
+}
+ul{
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    list-style: none;
+    padding: 20px;
+}
+.name{
+    font-weight: normal;
+}
+li:first-child{
+    border-top: 1px solid black;
+}
+li:last-child{
+    border-bottom: 1px solid black;
+}
+li:hover{
+    background-color: rgb(189, 125, 42);
+}

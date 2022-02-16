@@ -1,0 +1,67 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list{
+    padding-right: 20px;
+    min-width: 130px;
+}
+#list{
+    align-items: center;
+}
+.fav{
+    color: gray;
+    text-align: right;
+    margin-right: 20px;
+}
+.movie_card{
+    display: flex;
+}
+.card_info span{
+    display: block;
+}
+.movies_all, .movies_fav{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+.actors_list{
+    display: flex;
+}
+.actors_list li{
+    padding: 10px;
+    background-color: lightskyblue;
+    margin: 5px;
+    border-radius: 10px;
+}
+.movie_title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.movie_list{
+    padding: 5px;
+    text-align: center;
+    margin-left: 5px;
+}
+.active{
+    border-left: 4px solid lightskyblue;
+}
+.sort{
+    display: flex;
+}
+.sort button{
+    padding: 10px;
+    margin: 5px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    border: none;
+}
+.sort_active{
+    background-color: blue!important;
+}
+.favred{
+    color: red!important;
+    text-align: right;
+    margin-right: 20px;
+}
